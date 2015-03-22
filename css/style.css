@@ -1,0 +1,91 @@
+html { 
+  background: url('../images/quiz-background.jpg') no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.heading > h1 {
+	color: white;
+	text-align: center;
+	font-family: 'Sarpanch', sans-serif;
+	margin-top: 1em;
+	margin-bottom: 0.5em;
+	font-size: 3em;
+	text-shadow: 2px 5px 2px black;
+	font-weight: bolder;
+}
+
+#form-container {
+	display: flex;
+	justify-content: center;
+}
+
+#question-form {
+	display: inline-block;
+	background-color: black;
+	width: 30em;
+	text-align: center;
+}
+
+input {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+#question {
+	font-family: 'Raleway', sans-serif;
+	font-weight: bolder;
+	font-size: 2em;
+	color: white;
+	margin-bottom: 1em;
+	margin-top: 1em;
+	text-shadow: 2px 2px 2px #08118B;
+	display: inline-block;
+}
+
+.answer {
+	font-family: 'Raleway', sans-serif;
+	font-weight: bold;
+	font-size: 1.5em;
+	color: white;
+}
+
+#submit {
+	font-family: 'Sarpanch', sans-serif;
+	font-size: 1.5em;
+	font-weight: bolder;
+	background-color: black;
+	color: white;
+	height: 2em;
+	width: 10em;
+	border-radius: 1em;
+	box-shadow: 2px 2px 2px #08118B;
+	border-color: black;
+	margin-top: 1.5em;
+	margin-bottom: 1em;
+	-webkit-transition: background 0.75s ease;
+	-moz-transition: background 0.75s ease;
+	-ms-transition: background 0.75s ease;
+	-o-transition: background 0.75s ease;
+	transition: background 0.75s ease;
+}
+
+
+#submit:hover {
+	background-color: #08118B;
+	box-shadow: 2px 2px 2px white;
+	border-color: #08118B;
+}
+
+.explanation {
+	font-weight: bold;
+	font-family: 'Sarpanch', sans-serif;
+	color: white;
+	text-shadow: 1px 1px 1px black;
+	font-size: 1.5em;
+	display: block;
+	text-align: center;
+	margin-top: 1.5em;
+}
