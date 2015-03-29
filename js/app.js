@@ -37,7 +37,7 @@ $(document).ready(function(){
 	// Application Functionality
 
   var currentQuestion = 0;
-  var correctAnswers = 0
+  var correctAnswers = 0;
 
 	function fillFormWithQuestion (questionNumber) {
 		$("#question").html (questions[questionNumber].question);
@@ -50,12 +50,19 @@ $(document).ready(function(){
 	fillFormWithQuestion (0);
 
 	$('#question-form').submit(function(event) {
+
+		if (currentQuestion > 4) {
+			window.location.reload();
+		}
+
+		var checkedButtons = $('input[type=radio]:checked');
+		if (checkedButtons.length <= 0) {
+			$('.explanation').html("Please provide an answer before submitting!");
+			return false;
+		}
+
 	  $('.explanation').html(questions[currentQuestion].explanation);
 	  var userInput = $('input[type=radio]:checked').val();
-
-	  console.log('question:', questions[currentQuestion]);
-	  console.log('correct:',questions[currentQuestion].correct);
-	  console.log('user:', userInput);
 
 	  if (questions[currentQuestion].correct == userInput) {
 	    correctAnswers++;
